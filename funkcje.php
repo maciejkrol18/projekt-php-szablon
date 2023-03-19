@@ -131,7 +131,7 @@ function pytanie4() {
             <label for="pyt4a">
                 <input type="radio" name="pyt4" value="1" id="pyt4a"> Odpowiedź 1 
             </label>
-            <label for="pyt1b">
+            <label for="pyt4b">
                 <input type="radio" name="pyt4" value="2" id="pyt4b"> Odpowiedź 2
             </label>
             <button>Sprawdź</button>
@@ -241,9 +241,12 @@ function czas() {
     }
 
     echo $dzien.", ".usunZero(date('m'))." ".$miesiac." ".date('Y')." roku";
+    // Wersja bez usuwania zera:
+    // echo $dzien.", ".date('m')." ".$miesiac." ".date('Y')." roku";
 }
 
 function usunZero($string) {
+    // Wyjaśnienie:    
     // Jeśli na pierwszym indeksie napisu jest 0, zwróć wersję z uciętym zerem
     // Jeśli nie ma zera, zwróć ten sam string
     if (substr($string, 0, 1) === "0") {
