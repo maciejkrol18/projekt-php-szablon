@@ -240,9 +240,9 @@ function czas() {
             break;
     }
 
-    echo $dzien.", ".usunZero(date('m'))." ".$miesiac." ".date('Y')." roku";
+    echo $dzien.", ".usunZero(date('j'))." ".$miesiac." ".date('Y')." roku";
     // Wersja bez usuwania zera:
-    // echo $dzien.", ".date('m')." ".$miesiac." ".date('Y')." roku";
+    // echo $dzien.", ".date('j')." ".$miesiac." ".date('Y')." roku";
 }
 
 function usunZero($string) {
