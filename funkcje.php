@@ -240,20 +240,7 @@ function czas() {
             break;
     }
 
-    echo $dzien.", ".usunZero(date('j'))." ".$miesiac." ".date('Y')." roku";
-    // Wersja bez usuwania zera:
-    // echo $dzien.", ".date('j')." ".$miesiac." ".date('Y')." roku";
-}
-
-function usunZero($string) {
-    // Wyjaśnienie:    
-    // Jeśli na pierwszym indeksie napisu jest 0, zwróć wersję napisu tylko ze znakami od indeksu 1
-    // Jeśli nie ma zera, zwróć ten sam napis
-    if (substr($string, 0, 1) === "0") {
-        return substr($string, 1);
-    } else {
-        return $string;
-    }
+    echo $dzien.", ".date('j')." ".$miesiac." ".date('Y')." roku";
 }
 
 ?>
