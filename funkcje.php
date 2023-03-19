@@ -94,9 +94,9 @@ function pytanie2() {
 
     if (isset($_POST['pyt2'])) {
         if ($_POST['pyt2'] == 3) {
-            echo '<p class="dobrze">Prawidłowa odpowiedź</p>';
+            echo '<p>Prawidłowa odpowiedź</p>';
         } else {
-            echo '<p class="zle">Zła odpowiedź</p>';
+            echo '<p>Zła odpowiedź</p>';
         }
     }
 }
@@ -247,8 +247,8 @@ function czas() {
 
 function usunZero($string) {
     // Wyjaśnienie:    
-    // Jeśli na pierwszym indeksie napisu jest 0, zwróć wersję z uciętym zerem
-    // Jeśli nie ma zera, zwróć ten sam string
+    // Jeśli na pierwszym indeksie napisu jest 0, zwróć wersję napisu tylko ze znakami od indeksu 1
+    // Jeśli nie ma zera, zwróć ten sam napis
     if (substr($string, 0, 1) === "0") {
         return substr($string, 1);
     } else {
